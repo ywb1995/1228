@@ -51,24 +51,37 @@ class User extends  Controller{
         if($request->isPost()) {
             $data = $request->post();
             $code = 0;
-            if ($data['password'][0] && $data['password'][1])
+            //如果密码填写
+            if (!empty($data['password']) && !empty($data['password2']))
             {
-
-                if ($data['password'][0] == $data['password'][1]) {
-                    $data = [
-                        'username' => trim($data['username']),
-                        'password' => trim($data['password'])
-                    ];
+                if ($data['password'] == $data['password2']) {
                     $info = $this->validate($data, 'User.edit');
-                    if ($info !== true) {
-                        $res['message'] = $info;
+                    if ($info !== true){
+                        $message = $info;
                     } else {
-
+                        $user = new UserModel();
+                        if($user->editUser($data)){
+                            $code = 1;
+                            $message = '修改成功';
+                        }
                     }
                 } else {
-                    $res['message'] = '两次输入密码不一致请检查';
+                    $message = '两次输入密码不一致请检查';
+                }
+            }else{
+               //如果密码没有填写
+                $info = $this->validate($data, 'User.edit');
+                if ($info !== true) {
+                    $message = $info;
+                } else {
+                    $user = new UserModel();
+                    if($user->editUser($data)){
+                        $code = 1;
+                        $message = '修改成功';
+                    }
                 }
             }
+            return returnMessage($code, $message,$request->token());
         }
 
         if(empty($id)){

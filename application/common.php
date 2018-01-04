@@ -19,3 +19,14 @@ if(!function_exists('dd')){
 		echo "</pre>";
 	}
 }
+
+if(!function_exists("returnMessage")){
+    function returnMessage($code, $message,$token = ''){
+        $res['code'] = $code;
+        $res['message'] = $message;
+        if(!empty($token)){
+            $res['token'] = $token;
+        }
+        return json_encode($res);
+    }
+}
