@@ -1,6 +1,12 @@
 {include file='common/head'}
         <!-- /Page Sidebar -->
         <!-- Page Content -->
+<style>
+    .divpage{
+        margin-top: 10px;
+        text-align:center;
+    }
+</style>
         <div class="page-content">
             <!-- Page Breadcrumb -->
             <div class="page-breadcrumbs">
@@ -48,6 +54,10 @@
                                         {/foreach}
                                         </tbody>
                                     </table>
+                                    <div class="divpage">
+                                        {$users->render()}
+                                    </div>
+
                                 </div>
                                 <div>
                                 </div>
@@ -57,6 +67,7 @@
                 </div>
 
             </div>
+
             <!-- /Page Body -->
         </div>
         <!-- /Page Content -->
