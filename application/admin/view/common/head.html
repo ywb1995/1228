@@ -47,20 +47,23 @@
                                 <div class="avatar" title="View your public profile">
                                     <img src="__ADMIN__images/adam-jansen.jpg">
                                 </div>
+
+
+
                                 <section>
-                                    <h2><span class="profile"><span>admin</span></span></h2>
+                                    <h2><span class="profile"><span>{$Request.session.autologin.name}</span></span></h2>
                                 </section>
                             </a>
                             <!--Login Area Dropdown-->
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
                                 <li class="username"><a>David Stevenson</a></li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/logout.html">
+                                    <a href="{:url('publics/outlogin')}">
                                         退出登录
                                     </a>
                                 </li>
                                 <li class="dropdown-footer">
-                                    <a href="/admin/user/changePwd.html">
+                                    <a href="{:url('user/edit',['id'=>$Request.session.autologin.id])}">
                                         修改密码
                                     </a>
                                 </li>

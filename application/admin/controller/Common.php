@@ -1,17 +1,17 @@
 <?php
 namespace app\admin\controller;
-
+use app\admin\model\User;
 use think\Controller;
 
-class Common extends  Controller
-{
-    protected function _initialize()
+class Common extends  Controller{
+    public function  _initialize()
     {
-        {
-            echo 111;
-            die;
 
+        if(!User::isLogin()){
+
+            return $this->error('请先登录','publics/signin');
         }
+
     }
+
 }
-?>

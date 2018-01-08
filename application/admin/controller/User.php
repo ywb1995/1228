@@ -6,10 +6,14 @@
  * Time: 11:31
  */
 namespace app\admin\controller;
-use think\Controller;
 use app\admin\model\User as UserModel;
 
-class User extends  Controller{
+
+class User extends  Common {
+
+    public function  index(){
+        return $this->fetch();
+    }
     public function lst(){
         $User = new UserModel();
         $userList = $User->userAll();
@@ -17,7 +21,7 @@ class User extends  Controller{
         return $this->fetch('lst');
     }
 
-    public  function  add(){
+    public function  add(){
         $request = $this->request;
         if($request->isPost()){
             $data = $request->post();
@@ -84,7 +88,7 @@ class User extends  Controller{
             return returnMessage($code, $message,$request->token());
         }
 
-        if(empty($id)){
+        if(!isset($id)){ //这里不用empty，因为empty当变量为0时，也返回true
             return $this->error('页面不存在');
         }
         $user = UserModel::get($id);
@@ -92,5 +96,17 @@ class User extends  Controller{
         $this->assign('user',$user);
         return $this->fetch();
 
+    }
+
+    public function  delete(){
+        $id = input('id');
+        if(!isset($id)){
+            return $this->error('页面不存在');
+        }
+        if(UserModel::destroy($id)){
+            return $this->success('删除成功','lst');
+        }else{
+            return $this->error('删除失败');
+        }
     }
 }

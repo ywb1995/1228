@@ -21,6 +21,11 @@ class User extends Model
 		$password = trim($password);
 		$user = self::get(['username' => $username]);
 
+		if(!$user){
+            $this->error = "用户名或密码错误";
+		    return false;
+        }
+
 		$password = md5($password);
 		if($password == $user['password']){
 		    //更新登录信息
@@ -69,6 +74,38 @@ class User extends Model
     }
 
     public function autoLogin($user){
-//
+        //保存session
+        $autoLogin = [
+            'name'=>$user->username,
+            'id' => $user->id
+        ];
+
+        session('autologin',$autoLogin);
+        session('autologin_sign',$this->dataAuthSign($autoLogin));
+    }
+    public static function isLogin(){
+        $autoLogin = session('autologin');
+        if($autoLogin){
+            if(session("autologin_sign") == self::dataAuthSign($autoLogin)){
+                return true;
+            }
+        }
+        return false;
+    }
+    /*
+
+数据加密方法
+ $data  被加密的数组
+ */
+    public static function  dataAuthSign($data){
+        if(!is_array($data)){
+            $data = (array)($data);
+        }
+        ksort($data);
+        $data = http_build_query($data);
+        //生成签名
+        $sign = sha1($data);
+        return $sign;
+
     }
 }

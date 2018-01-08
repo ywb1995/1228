@@ -53,6 +53,10 @@ class Publics extends Controller
 		return $this->fetch();
 	}
 
+	public function  outLogin(){
+	    session(null);
+	    $this->redirect('signin');
+    }
 	public function a()
 	{	
 		$User = new User;
@@ -67,10 +71,6 @@ class Publics extends Controller
 
 	}
 
-	public function  index(){
-	    return $this->fetch();
-    }
-    public function lst(){
 
-    }
+
 }
