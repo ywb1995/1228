@@ -23,7 +23,18 @@ class User extends Model
 
 		$password = md5($password);
 		if($password == $user['password']){
-			return true;
+		    //更新登录信息
+            $user->last_login_time = time();
+            $user->last_login_ip = request()->ip();
+            if($user->save()){
+
+                $this->autoLogin($user);
+                return true;
+            }else{
+                $this->error = "更新登录信息失败";
+                return false;
+            }
+
 		}else{
 		    $this->error = '密码错误';
 		    return false;
@@ -54,6 +65,10 @@ class User extends Model
     }
 
 	public  function  userAll(){
-	    return $this->where(1)->select();
+	    return $this->field(['username','id'])->paginate(1);
+    }
+
+    public function autoLogin($user){
+//
     }
 }
