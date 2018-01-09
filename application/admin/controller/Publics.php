@@ -47,10 +47,7 @@ class Publics extends Controller
             }
 			return json_encode($res);
 		}
-		
-
-
-		return $this->fetch();
+		return User::isLogin() ? $this->redirect('user/index') :  $this->fetch();
 	}
 
 	public function  outLogin(){
@@ -64,12 +61,7 @@ class Publics extends Controller
 		dd($a);
 	}
 
-	public  function add($value='', $password)
-	{
-		$User = new User();
-		$User->addUser($value, $password);
 
-	}
 
 
 
