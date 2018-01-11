@@ -27,7 +27,7 @@ class User extends  Common {
             $data = $request->post();
             $code =0;
             //数据验证
-            $info = $this->validate($data, 'User.update');
+            $info = $this->validate($data,    'User.update');
             if($info !== true){
                 $message = $info;
             }else{
