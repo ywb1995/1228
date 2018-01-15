@@ -30,19 +30,26 @@
                     </div>
                     <div class="widget-body">
                         <div id="horizontal-form">
-                            <form class="form-horizontal" id="formCate" role="form" action="" method="post">
+                            <form class="form-horizontal" enctype="multipart/form-data" id="formArticle" role="form" action="" method="post"  >
                                 <div class="form-group">
-                                    <label for="catename" class="col-sm-2 control-label no-padding-right">文章标题</label>
+                                    <label for="title" class="col-sm-2 control-label no-padding-right">文章标题</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control"  placeholder="" name="catename" required="" type="text">
+                                        <input class="form-control"  placeholder="" name="title" required="" type="text">
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
+                                <div class="form-group">
+                                    <label for="keywords" class="col-sm-2 control-label no-padding-right">关键字</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control"  placeholder="" name="keywords"  required="" type="text">
+                                    </div>
+
+                                </div>
 
                                 <div class="form-group">
-                                    <label for="pid" class="col-sm-2 control-label no-padding-right">所属分类</label>
+                                    <label for="c_id" class="col-sm-2 control-label no-padding-right">所属分类</label>
                                     <div class="col-sm-6">
-                                        <select class="form-control" name="pid">
+                                        <select class="form-control" name="c_id">
                                             {foreach name='cates' item='cate'}
                                             <option value="{$cate.id}">{if condition='$cate.level neq 0'}|{/if}{php} echo  str_repeat('----',$cate['level']) {/php} {$cate.catename}</option>
                                             {/foreach}
@@ -51,10 +58,36 @@
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="content" class="col-sm-2 control-label no-padding-right">所属分类</label>
+                                    <label for="content" class="col-sm-2 control-label no-padding-right">文章内容</label>
                                     <div class="col-sm-6">
                                         <textarea id="content" name="content"></textarea>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="author" class="col-sm-2 control-label no-padding-right">作者</label>
+                                    <div class="col-sm-3">
+                                        <input class="form-control"  placeholder="" name="author"  required="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="click" class="col-sm-2 control-label no-padding-right">点击数</label>
+                                    <div class="col-sm-3">
+                                        <input class="form-control"  placeholder="" name="click" value="100" required="" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zan" class="col-sm-2 control-label no-padding-right">点赞数</label>
+                                    <div class="col-sm-3">
+                                        <input class="form-control"  placeholder="" name="zan" value="100" required="" type="text">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="image" class="col-sm-2 control-label no-padding-right">缩略图</label>
+                                    <div class="col-sm-3">
+                                        <input class="form-control" name="image" placeholder=""    type="file" />
+                                    </div>
+
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
@@ -78,33 +111,13 @@
 
 {include file='common/foot'}
 <script type="text/javascript">
-    $(function(){
-
+    $(function() {
         $("#btnSub").click(function () {
-            var form = new FormData(document.getElementById("formCate"));
-            $.ajax({
-                url:"{:url('add')}",
-                type:"post",
-                data:form ,
-                processData:false,
-                contentType:false,
-                success:function(data){
-                    data = JSON.parse(data);
-                    alert(data.message);
-                    $('#token').val(data.token);
-                    if(data.code == 1){
-                        window.location.href="{:url('lst')}";
-                    }
-                },
-                error:function(e){
-                    alert("错误！！");
-                    // window.clearInterval(timer);
-                },
-
-            });
-
+            sendAjaxForm("formArticle",'{:url("add")}','{:url("lst")}');
         })
     })
+
+
     //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
     UE.getEditor('content',{initialFrameWidth:800,initialFrameHeight:400,});
