@@ -49,30 +49,7 @@
         var form = null;
         //表单的ajax提交，
         $("#btnSubmit").click(function(){
-            form = new FormData(document.getElementById("login"));
-            $.ajax({
-                url:"{:url('signin')}",
-                type:"post",
-                data:form,
-                processData:false,
-                contentType:false,
-                success:function(data){
-                    // window.clearInterval(timer);
-                    data = JSON.parse(data);
-                    alert(data.message);
-                    $("#token").val(data.token);
-                    if(data.code == 1){
-                        window.location.href = '{:url("user/index")}';
-                    }
-
-
-                },
-                error:function(e){
-                    alert("错误！！");
-                    // window.clearInterval(timer);
-                },
-
-            });        
+            sendAjaxForm('login',"{:url('publics/signin')}", "{:url('user/index')}");
         })
 
     })

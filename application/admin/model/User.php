@@ -61,7 +61,7 @@ class User extends Model
 
 	public function editUser($data){
 	    //update方法用allowfiled无效
-        if($this->isUpdate(true)->allowField(true)->save($data)){
+        if($this->isUpdate(true)->allowField(true)->save($data) !== false     ){
             return true;
         }else{
             $this->error = "新增失败,数据库错误";
