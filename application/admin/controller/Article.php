@@ -1,9 +1,12 @@
 <?php
 namespace app\admin\controller;
 use app\admin\model\Cate;
+use think\Db;
 use app\admin\model\Article as ArticleModel;
 class Article extends Common{
     public function lst(){
+        $articles = Db::table("tp_admin_article a")->join("tp_admin_cate c",'a.c_id=c.id')->where("a.status=0")->paginate(2);
+        $this->assign("articles",$articles);
         return $this->fetch();
     }
 

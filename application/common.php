@@ -30,3 +30,34 @@ if(!function_exists("returnMessage")){
         return json_encode($res);
     }
 }
+//无限极分类，生成一维数组的方式，
+if(!function_exists("listTree")){
+    function listTree($data,$pid,$level ){
+        $arr = [];
+        foreach($data as $key=>$value){
+            if($value['pid'] == $pid){
+                $value['level'] = $level;
+                $arr[] = $value;
+                $arr = array_merge($arr,listTree($data,$value['id'],$level+1));
+            }
+        }
+        return $arr;
+    }
+}
+
+//根据父级id查找所有子集id
+if(!function_exists("childToParent")){
+    function childToParent($data, $id){
+        if(!is_array($data)){
+            $data = (array)($data);
+        }
+        $arr = [];
+        foreach($data as $key=>$value){
+            if($value['pid'] == $id){
+                $arr[] = $value['id'];
+                $arr = array_merge($arr,childToParent($data,$value['id']));
+            }
+        }
+        return $arr;
+    }
+}
