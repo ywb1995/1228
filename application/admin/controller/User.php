@@ -6,6 +6,7 @@
  * Time: 11:31
  */
 namespace app\admin\controller;
+use app\admin\model\AuthGroup;
 use app\admin\model\User as UserModel;
 
 
@@ -27,13 +28,15 @@ class User extends  Common {
             $data = $request->post();
             $code =0;
             //数据验证
-            $info = $this->validate($data,    'User.update');
+            $data1 = $data;
+            $data1['password'] =  $data1['password'][0];
+            $info = $this->validate($data1,    'User.update');
             if($info !== true){
                 $message = $info;
             }else{
                 if($data['password'][0] == $data['password'][1]){
                     $User = new UserModel();
-                    if($add = $User->addUser($data['username'],$data['password'][0] )){
+                    if($add = $User->addUser($data['username'],$data['password'][0],$data['group_id'] )){
                         $code = 1;
                         $message = '新增成功';
                     }else{
@@ -46,6 +49,8 @@ class User extends  Common {
             $token = $request->token();
             return returnMessage($code,$message,$token);
         }
+        $authGroups = AuthGroup::all(['status'=>1]);
+        $this->assign('authGroups',$authGroups);
         return $this->fetch();
     }
 
@@ -93,7 +98,10 @@ class User extends  Common {
         }
         $user = UserModel::get($id);
         if(!$user) $this->error('用户不存在');
+        $authGroups = AuthGroup::all(['status'=>1]);
         $this->assign('user',$user);
+        $this->assign('kkk',$user->AuthGroup);
+        $this->assign('authGroups',$authGroups);
         return $this->fetch();
 
     }

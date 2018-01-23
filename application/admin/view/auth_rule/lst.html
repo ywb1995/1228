@@ -33,23 +33,22 @@
                                         <thead class="">
                                         <tr>
                                             <th class="text-center">ID</th>
-                                            <th class="text-center">用户名称</th>
-                                            <th class="text-center">用户组</th>
+                                            <th class="text-center">规则名称</th>
+                                            <th class="text-center">规则路径</th>
                                             <th class="text-center">操作</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        {foreach name='users' item='user'}
+                                        {foreach name='rules' item='rule'}
                                         <tr>
-
-                                            <td align="center">{$user.id}</td>
-                                            <td align="center">{$user.username}</td>
-                                            <td align="center">{php}$count = count($user['AuthGroup']); foreach($user['AuthGroup'] as $k=>$groupName){ echo $groupName['title']; if($k != ($count-1)) echo "，";}{/php}</td>
+                                            <td align="center">{$rule.id}</td>
+                                            <td align="left">{php}if($rule['level'] != 0) echo '|'; echo str_repeat('----',$rule['level']) {/php}{$rule.title}</td>
+                                            <td align="center">{$rule.name}</td>
                                             <td align="center">
-                                                <a href="{:url('edit',['id'=>$user.id])}" class="btn btn-primary btn-sm shiny">
+                                                <a href="{:url('edit',['id'=>$rule.id])}" class="btn btn-primary btn-sm shiny">
                                                     <i class="fa fa-edit"></i> 编辑
                                                 </a>
-                                                <a href="{:url('delete',['id'=>$user.id])}" onClick="warning('确实要删除吗', '/admin/user/del/id/6.html')" class="btn btn-danger btn-sm shiny">
+                                                <a href="{:url('delete',['id'=>$rule.id])}" onClick="warning('确实要删除吗', '/admin/user/del/id/6.html')" class="btn btn-danger btn-sm shiny">
                                                     <i class="fa fa-trash-o"></i> 删除
                                                 </a>
                                             </td>
@@ -57,9 +56,9 @@
                                         {/foreach}
                                         </tbody>
                                     </table>
-                                    <div class="divpage">
-                                        {$users->render()}
-                                    </div>
+                                    <!--<div class="divpage">-->
+
+                                    <!--</div>-->
 
                                 </div>
                                 <div>

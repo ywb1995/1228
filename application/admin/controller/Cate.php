@@ -39,8 +39,8 @@ class  Cate extends  Common{
 
     public function edit(){
         $id = input('id');
-        if(!isset($id)){
-            return $this->error('页面不存在');
+        if(!($cate =  CateModel::get($id))){
+            return $this->error('数据不存在');
         }
         if(request()->isPost()){
             $data = request()->post();
@@ -61,7 +61,7 @@ class  Cate extends  Common{
             }
             return returnMessage($code,$message,request()->token());
         }
-        $cate =  CateModel::get($id);
+
         $cates = CateModel::cateAll();
         $this->assign('cates',$cates);
         $this->assign('cate',$cate);
@@ -73,7 +73,7 @@ class  Cate extends  Common{
         if(!isset($id)){
             return $this->error('页面不存在');
         }
-
+        \app\admin\model\Article::destroy(['c_id'=>$id]);
         if(CateModel::destroy($id) !== false){
             return $this->success('删除成功','lst');
         }else{
@@ -83,6 +83,10 @@ class  Cate extends  Common{
     public function deleteChild(){
         $id = input('id');
         $arrId = childToParent(CateModel::cateAll(),$id);
+        //删除分类下的文章
+        foreach ($arrId as $item) {
+            \app\admin\model\Article::destroy(['c_id'=>$item]);
+        }
         if(CateModel::destroy($arrId) === false){
             return $this->error('删除失败,勤检查数据库');
         }

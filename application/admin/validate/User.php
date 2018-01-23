@@ -11,7 +11,8 @@ class User extends Validate
 	//验证规则
 	protected $rule = [
 		"username|用户名" => "require|alphaNum|token|unique:admin_user|length:4,25", //alphaNum验证是否为数字和字母  token是表单令牌验证
-		"password|密码"   => "require|length:6",
+		"password|密码"   => "require|length:6,10",
+        'captcha|验证码'=>'require|captcha'
 	];
 
 	//验证警告
@@ -25,7 +26,7 @@ class User extends Validate
 
 	//验证场景
     protected  $scene = [
-        'signin' => ["username" => "require|alphaNum|token","password"],
+        'signin' => ["username" => "require|alphaNum|token","password",'captcha'],
         'edit' => ["username"=>"require|alphaNum|token|length:4,25","password"=>'length:6'],
         'update' => ["username","password"]
     ];

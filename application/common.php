@@ -17,6 +17,7 @@ if(!function_exists('dd')){
 		echo "<pre>";
 		var_dump($value);
 		echo "</pre>";
+		die;
 	}
 }
 
@@ -30,15 +31,33 @@ if(!function_exists("returnMessage")){
         return json_encode($res);
     }
 }
+//根据子级id找出所有父级id
+if(!function_exists('getParent')){
+    function getParent($data,$id){
+        $arr = [];
+        foreach ($data as $v){
+            if($v['id'] == $id){
+                $arr[] = $v['id'];
+                $arr = array_merge($arr, getParent($data,$v['pid']));
+            }
+        }
+        return $arr;
+    }
+}
 //无限极分类，生成一维数组的方式，
 if(!function_exists("listTree")){
-    function listTree($data,$pid,$level ){
+    function listTree($data,$pid,$level, $isGetParent=false){
         $arr = [];
         foreach($data as $key=>$value){
             if($value['pid'] == $pid){
+                if($isGetParent){
+                     $dataid = getParent($data,$value['id']);
+                     asort($dataid);
+                    $value['dataid'] =implode('-',$dataid);
+                }
                 $value['level'] = $level;
                 $arr[] = $value;
-                $arr = array_merge($arr,listTree($data,$value['id'],$level+1));
+                $arr = array_merge($arr,listTree($data,$value['id'],$level+1,$isGetParent));
             }
         }
         return $arr;
@@ -59,5 +78,27 @@ if(!function_exists("childToParent")){
             }
         }
         return $arr;
+    }
+}
+
+////如果目录下文件为空删除文件夹
+if(!function_exists('isEmptyDir')){
+    function isEmptyDir($path){
+        $info = true;
+        if(is_dir($path)){
+            $hanle = opendir($path);
+            while ($item = readdir($hanle)){
+                if($item != '.' && $item != '..'){
+                    if(!is_dir($path.DS.$item)){
+                        $info = false;
+                    }else{
+                        $info = isEmptyDir($path.DS.$item);
+                    }
+                }
+            }
+            closedir($hanle);
+            return $info;
+        }
+
     }
 }

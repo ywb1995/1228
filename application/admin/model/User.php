@@ -9,6 +9,10 @@ class User extends Model
 {
 	protected $table = 'tp_admin_user';
 
+	//定义和用户组表的多对多关联
+    public function AuthGroup(){
+        return $this->belongsToMany('AuthGroup','auth_group_access','group_id','uid');
+    }
 	//密码的修改器，密码自动加密
 	public function setPasswordAttr($value){
 		return md5((string)$value);
@@ -46,12 +50,16 @@ class User extends Model
         }
 	}
 
-	public function addUser($username, $password)
+	public function addUser($username, $password,$group_id)
 	{
 
 		$this->username = trim($username);
 		$this->password = trim($password);
 		if($this->save()){
+            foreach($group_id as $v){
+                $AuthGroup = AuthGroup::get($v);
+                $this->get($this->id)->AuthGroup()->attach($AuthGroup);
+            }
 		    return true;
         }else{
 		    $this->error = '新增失败';
@@ -61,7 +69,12 @@ class User extends Model
 
 	public function editUser($data){
 	    //update方法用allowfiled无效
-        if($this->isUpdate(true)->allowField(true)->save($data) !== false     ){
+        if($this->update($data,'',true) !== false ){
+            $this->get($data['id'])->AuthGroup()->detach();
+            foreach($data['group_id'] as $v){
+                $AuthGroup = AuthGroup::get($v);
+                $this->get($data['id'])->AuthGroup()->attach($AuthGroup);
+            }
             return true;
         }else{
             $this->error = "新增失败,数据库错误";
