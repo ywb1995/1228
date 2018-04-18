@@ -1,0 +1,67 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\1228\public/../application/admin\view\publics\signin.html";i:1516355225;}*/ ?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"><!--Head--><head>
+    <meta charset="utf-8">
+    <title>童老师ThinkPHP交流群：484519446</title>
+    <meta name="description" content="login page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__ADMIN__style/bootstrap.css" rel="stylesheet">
+    <link href="__ADMIN__style/font-awesome.css" rel="stylesheet">
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__ADMIN__style/beyond.css" rel="stylesheet">
+    <link href="__ADMIN__style/demo.css" rel="stylesheet">
+    <link href="__ADMIN__style/animate.css" rel="stylesheet">
+</head>
+<body>
+<!-- action="<?php echo url('signin'); ?>" -->
+
+    <div class="login-container animated fadeInDown">
+        <form  method="post"  id='login'>
+            <div class="loginbox bg-white">
+                <div class="loginbox-title">SIGN IN</div>
+                <div class="loginbox-textbox">
+                    <input value="" class="form-control" placeholder="username" name="username" type="text">
+                </div>
+                <div class="loginbox-textbox">
+                    <input class="form-control" placeholder="password" name="password" type="password">
+                </div>
+                <div class="loginbox-textbox">
+                    <div style="width: 100px; float: left; vertical-align: middle;">
+                        <img src="<?php echo captcha_src(); ?>" height="30" width="100" alt="captcha"  onclick='this.src=this.src+"?"+"id="+Math.random()'/>
+                    </div>
+                    <div style="width: 100px;float: right;vertical-align: middle;padding-bottom: 10px;">
+                        <input class="form-control" placeholder="" name="captcha" type="text">
+                    </div>
+                </div>
+                <div class="loginbox-submit">
+                    <span class="btn btn-primary btn-block" id='btnSubmit'>Login</span>   
+                </div>
+            </div>
+                <div class="logobox">
+                    <p class="text-center">童老师ThinkPHP交流群：4845194464</p>
+                </div>
+                <!-- 表单令牌 -->
+                <input type="hidden" name="__token__" id='token' value="<?php echo \think\Request::instance()->token(); ?>" />
+        </form>
+    </div>
+    <!--Basic Scripts-->
+    <script src="__ADMIN__style/jquery.min.js"></script>
+    <script src="__ADMIN__style/bootstrap.js"></script>
+    
+    <!--Beyond Scripts-->
+    <script src="__ADMIN__style/beyond.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var form = null;
+        //表单的ajax提交，
+        $("#btnSubmit").click(function(){
+            sendAjaxForm('login',"<?php echo url('publics/signin'); ?>", "<?php echo url('user/index'); ?>");
+        })
+
+    })
+    </script>
+</body><!--Body Ends-->
+</html>

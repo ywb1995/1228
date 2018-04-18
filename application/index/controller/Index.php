@@ -33,6 +33,7 @@ class Index extends Controller
 
     }
 
+    //支付结束的回调方法
     public function index1()
     {
     	//引入sdk的微信接口文件

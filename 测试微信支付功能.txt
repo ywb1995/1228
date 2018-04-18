@@ -1,0 +1,7 @@
+微信支付测试在index模块的index控制器中
+
+使用前需要修改WxPay.Config.php的商户配置
+
+如果报错：curl出错，错误码:60 
+	修改		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,true);true为false
+

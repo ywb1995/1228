@@ -1,0 +1,760 @@
+---------------------------------------------------------------
+[ 2018-01-03T12:54:09+08:00 ] 127.0.0.1 GET /admin/publics/signin
+[ info ] tp.com/admin/publics/signin [运行时间：0.371021s][吞吐率：2.70req/s] [内存消耗：1,553.81kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\publics\signin.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T12:54:16+08:00 ] 127.0.0.1 POST /admin/publics/signin.html
+[ info ] tp.com/admin/publics/signin.html [运行时间：0.139008s][吞吐率：7.19req/s] [内存消耗：1,692.16kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'content-length' => '366',
+  'accept' => '*/*',
+  'origin' => 'http://tp.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary1u3WPTCBBs6PupwZ',
+  'referer' => 'http://tp.com/admin/publics/signin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'aa',
+  'password' => 'bb',
+  '__token__' => '393d370af8a5e6ad02f7b24c492f303e',
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T12:54:42+08:00 ] 127.0.0.1 POST /admin/publics/signin.html
+[ info ] tp.com/admin/publics/signin.html [运行时间：0.360020s][吞吐率：2.78req/s] [内存消耗：3,005.85kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'content-length' => '370',
+  'accept' => '*/*',
+  'origin' => 'http://tp.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryA2iPPMeHr81NKMqH',
+  'referer' => 'http://tp.com/admin/publics/signin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'aa',
+  'password' => 'bbbbbb',
+  '__token__' => '61dd5231c60380e03ccfc7828d192d93',
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020001s ] mysql:host=127.0.0.1;dbname=1228;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `username` = 'aa' LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [1]Call to a member function getError() on a non-object[D:\phpStudy\WWW\1228\application\admin\controller\Publics.php:38]
+---------------------------------------------------------------
+[ 2018-01-03T12:54:45+08:00 ] 127.0.0.1 GET /admin/publics/signin
+[ info ] tp.com/admin/publics/signin [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：1,554.03kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\publics\signin.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T12:54:51+08:00 ] 127.0.0.1 POST /admin/publics/signin.html
+[ info ] tp.com/admin/publics/signin.html [运行时间：0.185011s][吞吐率：5.41req/s] [内存消耗：3,005.85kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'content-length' => '370',
+  'accept' => '*/*',
+  'origin' => 'http://tp.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2stPMpgGD4Q77pbw',
+  'referer' => 'http://tp.com/admin/publics/signin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'aa',
+  'password' => 'bbbbbb',
+  '__token__' => '874a08111df0aecc746383db6f4983e5',
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=1228;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `username` = 'aa' LIMIT 1 [ RunTime:0.001001s ]
+[ error ] [1]Call to a member function getError() on a non-object[D:\phpStudy\WWW\1228\application\admin\controller\Publics.php:38]
+---------------------------------------------------------------
+[ 2018-01-03T12:55:58+08:00 ] 127.0.0.1 GET /admin/publics/signin
+[ info ] tp.com/admin/publics/signin [运行时间：0.084004s][吞吐率：11.90req/s] [内存消耗：1,554.02kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\publics\signin.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T12:57:24+08:00 ] 127.0.0.1 POST /admin/publics/signin.html
+[ info ] tp.com/admin/publics/signin.html [运行时间：66.897826s][吞吐率：0.01req/s] [内存消耗：3,086.57kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'content-length' => '370',
+  'accept' => '*/*',
+  'origin' => 'http://tp.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywhSCrXnWJcGbqIlR',
+  'referer' => 'http://tp.com/admin/publics/signin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'aa',
+  'password' => 'bbbbbb',
+  '__token__' => '0e41cd4bf8c96ff9bc9fd5b1427863de',
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=1228;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `username` = 'aa' LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [1]Call to a member function getError() on a non-object[D:\phpStudy\WWW\1228\application\admin\controller\Publics.php:38]
+---------------------------------------------------------------
+[ 2018-01-03T12:59:11+08:00 ] 127.0.0.1 POST /admin/publics/signin.html
+[ info ] tp.com/admin/publics/signin.html [运行时间：6.717385s][吞吐率：0.15req/s] [内存消耗：1,702.67kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'content-length' => '370',
+  'accept' => '*/*',
+  'origin' => 'http://tp.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylt2Tn4gOVc8RynOp',
+  'referer' => 'http://tp.com/admin/publics/signin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'aa',
+  'password' => 'bbbbbb',
+  '__token__' => '0e41cd4bf8c96ff9bc9fd5b1427863de',
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T12:59:11+08:00 ] 127.0.0.1 GET /admin/publics/signin
+[ info ] tp.com/admin/publics/signin [运行时间：0.102006s][吞吐率：9.80req/s] [内存消耗：1,554.02kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\publics\signin.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T12:59:44+08:00 ] 127.0.0.1 POST /admin/publics/signin.html
+[ info ] tp.com/admin/publics/signin.html [运行时间：21.784246s][吞吐率：0.05req/s] [内存消耗：3,035.48kb] [文件加载：43]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'content-length' => '370',
+  'accept' => '*/*',
+  'origin' => 'http://tp.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyzsnIxY9V3Qr3x4A',
+  'referer' => 'http://tp.com/admin/publics/signin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'aa',
+  'password' => 'bbbbbb',
+  '__token__' => 'dba9175dcc037ef416fb5129de2a8db7',
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=1228;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `username` = 'aa' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-03T13:00:01+08:00 ] 127.0.0.1 POST /admin/publics/signin.html
+[ info ] tp.com/admin/publics/signin.html [运行时间：5.993342s][吞吐率：0.17req/s] [内存消耗：2,960.76kb] [文件加载：43]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'signin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'content-length' => '370',
+  'accept' => '*/*',
+  'origin' => 'http://tp.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEpQkTImamhJJxHHV',
+  'referer' => 'http://tp.com/admin/publics/signin',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'cc',
+  'password' => 'bbbbbb',
+  '__token__' => 'd9fa7e1c864039055940529d0fa27b11',
+)
+[ info ] [ RUN ] app\admin\controller\Publics->signin[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=1228;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `username` = 'cc' LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-01-03T13:00:19+08:00 ] 127.0.0.1 GET /admin/publics/index
+[ info ] tp.com/admin/publics/index [运行时间：0.146009s][吞吐率：6.85req/s] [内存消耗：1,643.11kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Publics->index[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\publics\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T13:00:20+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] tp.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.351020s][吞吐率：2.85req/s] [内存消耗：1,189.19kb] [文件加载：27]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://tp.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://tp.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T13:00:22+08:00 ] 127.0.0.1 GET /admin/document/index.html
+[ info ] tp.com/admin/document/index.html [运行时间：0.089006s][吞吐率：11.24req/s] [内存消耗：1,195.59kb] [文件加载：28]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'document',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp.com/admin/publics/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T13:01:20+08:00 ] 127.0.0.1 GET /admin/document/index.html
+[ info ] tp.com/admin/document/index.html [运行时间：0.469027s][吞吐率：2.13req/s] [内存消耗：1,195.55kb] [文件加载：28]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'document',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T13:01:24+08:00 ] 127.0.0.1 GET /admin/publics/index
+[ info ] tp.com/admin/publics/index [运行时间：0.347020s][吞吐率：2.88req/s] [内存消耗：1,716.90kb] [文件加载：35]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'publics',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Publics->index[ D:\phpStudy\WWW\1228\application\admin\controller\Publics.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\publics\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T13:01:25+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] tp.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.472027s][吞吐率：2.12req/s] [内存消耗：1,189.20kb] [文件加载：27]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://tp.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://tp.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T13:01:26+08:00 ] 127.0.0.1 GET /admin/user/lst.html
+[ info ] tp.com/admin/user/lst.html [运行时间：0.414024s][吞吐率：2.42req/s] [内存消耗：3,000.31kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp.com/admin/publics/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\User->lst[ D:\phpStudy\WWW\1228\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\user\lst.html [ array (
+  0 => 'users',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=1228;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.026001s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-03T13:01:27+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] tp.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.475028s][吞吐率：2.11req/s] [内存消耗：1,189.27kb] [文件加载：27]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://tp.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://tp.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T13:01:30+08:00 ] 127.0.0.1 GET /admin/user/edit/id/2.html
+[ info ] tp.com/admin/user/edit/id/2.html [运行时间：0.438025s][吞吐率：2.28req/s] [内存消耗：2,992.73kb] [文件加载：44]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://tp.com/admin/user/lst.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\admin\controller\User->edit[ D:\phpStudy\WWW\1228\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\1228\public/../application/admin\view\user\edit.html [ array (
+  0 => 'user',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=1228;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_admin_user` [ RunTime:0.031002s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_admin_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-01-03T13:01:31+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] tp.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.495028s][吞吐率：2.02req/s] [内存消耗：1,189.25kb] [文件加载：27]
+[ info ] [ LANG ] D:\phpStudy\WWW\1228\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://tp.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://tp.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'XDEBUG_SESSION=PHPSTORM; PHPSESSID=o5n1vhv66v5trm8ts1s0p1c7c0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File

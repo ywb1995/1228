@@ -8,8 +8,8 @@ use think\Db;
 */
 class Publics extends Controller
 {
-	
 	public function signin(){
+
 		$request = $this->request;
 		if($request->isPost()){
 
